@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import {Form, FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {Form, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { RESTService } from '../rest.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -16,6 +16,10 @@ import { data } from 'jquery';
 export class HotelComponent implements OnInit {
 
   form: FormGroup;
+
+  sortOrders = [
+    "BEST_SELLER"
+  ];
 
   icons: SvgIconOverrides = {
     arrowBack: 'arrow_back',
@@ -42,7 +46,7 @@ export class HotelComponent implements OnInit {
       this.form = fb.group({
         checkIn: new FormControl(),
         checkOut: new FormControl(),
-        rooms: new FormControl(),
+        rooms: new FormControl(1, [Validators.max(5), Validators.min(1)]),
         sortOrder: new FormControl()
       });
 
