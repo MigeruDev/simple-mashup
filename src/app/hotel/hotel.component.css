@@ -1,0 +1,189 @@
+.main-content {
+  padding-top: 0;
+}
+
+mat-form-field {
+  padding-top: 0.9em !important;
+}
+
+/* City and Hotel CSS*/
+.card-city {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.card-city .mat-card-image {
+  margin-bottom: 0;
+}
+
+.card-spinner {
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.card-gunter {
+  position: relative;
+  left: 40%;
+  right: 40%;
+}
+
+.card .card-footer {
+  margin-top: 10px;
+  padding-top: 0;
+}
+
+.carousel {
+  background-color: #000;
+}
+
+.mat-button .mat-button-wrapper>*{
+  opacity: 0.4 !important;
+}
+
+
+/***************************************************************/
+  /* Mat Expansion CSS*/
+
+  .card {
+    box-shadow: 0 5px 4px 2px rgb(0 0 0 / 14%);
+    margin-bottom: 5px;
+  }
+  
+  mat-expansion-panel-header {
+    padding-left: 0px;
+  }
+  
+  mat-radio-button{
+    color: #F4F4F9 !important;  /*White Smoke */
+  }
+  
+  .card-expansion {
+    background-color: #3E50B4; /*Violet Blue*/
+  }
+  
+  h4.card-category{
+    color: #F4F4F9 !important;  /*White Smoke */
+  }
+  
+  .mat-radio-label-content{
+    color: #F4F4F9 !important;  /*White Smoke */
+  }
+
+  div.card-header-morning {
+    background-color: #05576b !important;
+  }
+  
+  div.card-header-afternoon {
+    background-color: #c23903 !important;
+  }
+  
+  div.card-header-evening {
+    background-color: #770a81 !important;
+  }
+
+  div.card-weather {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 30%;
+    box-shadow: 0 2px 4px 2px rgb(0 0 0 / 14%);
+  }
+
+  .card-weather .card-title{
+    padding-left: 30px;
+  }
+
+  .card-img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+  }
+
+
+
+/***************************************************************/
+/* Card CSS*/
+
+.card-product {
+    border-bottom: 1.5px solid #eaeaea;
+    margin-bottom: 10px;
+    background-color: #EDEFF8;
+    margin-left: 3px;
+    max-width: 99.9%;
+}
+
+.card-hotelform {
+  border-bottom: 1.5px solid #eaeaea;
+  margin-bottom: 10px;
+  background-color: #EDEFF8;
+  margin-left: 20px;
+  max-width: 99.9%;
+}
+
+.card-expansion {
+    background: #3E50B4 !important; /*Violet Blue*/
+}
+
+
+.card .card-header-danger .card-icon, .card .card-header-danger:not(.card-header-icon):not(.card-header-text), .card .card-header-danger .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(67, 54, 244, 0.4);
+}
+
+.combo-box {
+  margin-bottom: -20px;
+}
+
+.combo-box-title {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+
+
+/***************************************************************/
+/* Input CSS*/
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }
+
+  /***************************************************************/
+/* Mat Rows&Columns CSS*/
+
+.mat-column-conteo {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.mat-header-conteo {
+text-align: right;
+justify-content: flex-end;
+}
+
+.card .card-header.card-header-tabs .nav-tabs-title {
+font-size: 1.125rem;
+font-weight: 300;
+}

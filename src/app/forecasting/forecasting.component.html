@@ -1,0 +1,108 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-secondary card-expansion">
+                        <h2 class="card-title">Reporte del Clima </h2>
+                        <p class="card-category">
+                        Ingrese la longitud y latitud del lugar que quiere conocer</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+
+                          <div class="row card-product">
+                            <div class="col-md-10">
+                              
+                              <div class="row">
+                                <mat-form-field class="col-md-6">
+                                  <input name="latitude" matInput placeholder="Latitud" [(ngModel)]="location.latitude" required>
+                                </mat-form-field>
+
+                                <mat-form-field class="col-md-6">
+                                  <input name="longitude" matInput placeholder="Longitud" [(ngModel)]="location.longitude" required>
+                                </mat-form-field>
+                              </div>
+
+                            </div>
+                            <div class="col-md-2">
+                              <button mat-raised-button type="submit" class="btn btn-primary col-md-12" (click)="getPoint()" >
+                                Buscar
+                                <mat-icon aria-label="Agregar Producto producto">search</mat-icon>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="clearfix"></div>
+                        </form>
+
+                        <!-- This code can be seriously improved by doing a NgFor of the forecastItems object. 
+                        I was a little lazy and I didn't-->
+                        <div class="row">
+                          <!-- Here should go the NgFor -->
+                          <div class="card card-weather col-md-4">
+                            <div class="card-header card-expansion  card-header-morning">
+                              <img class="card-img" src="{{this.forecastItems[0].icon}}">
+                              <h4 class="card-title">{{this.forecastItems[0].name}} </h4>
+                              <p class="card-category">{{this.forecastItems[0].detailedForecast}} </p>
+                            </div>
+                            <div class="card-body">
+                              <mat-chip-list>
+                                <mat-chip color="primary" selected="true">
+                                  <mat-icon >thermostat</mat-icon>
+                                  &nbsp;{{this.forecastItems[0].temperature}} °F
+                                </mat-chip>
+                                <mat-chip color="info" selected="true">
+                                  <mat-icon >wb_cloudy</mat-icon>
+                                  &nbsp;{{this.forecastItems[0].windSpeed}}
+                                </mat-chip>
+                              </mat-chip-list>
+                            </div>
+                          </div>
+
+                          <div class="card card-weather col-md-4">
+                            <div class="card-header card-expansion  card-header-afternoon">
+                              <img class="card-img" src="{{this.forecastItems[1].icon}}">
+                              <h4 class="card-title">{{this.forecastItems[1].name}} </h4>
+                              <p class="card-category">{{this.forecastItems[1].detailedForecast}} </p>
+                            </div>
+                            <div class="card-body">
+                              <mat-chip-list>
+                                <mat-chip color="primary" selected="true">
+                                  <mat-icon >thermostat</mat-icon>
+                                  &nbsp;{{this.forecastItems[1].temperature}} °F
+                                </mat-chip>
+                                <mat-chip color="info" selected="true">
+                                  <mat-icon >wb_cloudy</mat-icon>
+                                  &nbsp;{{this.forecastItems[1].windSpeed}}
+                                </mat-chip>
+                              </mat-chip-list>
+                            </div>
+                          </div>
+
+                          <div class="card card-weather col-md-4">
+                            <div class="card-header card-expansion  card-header-evening">
+                              <img class="card-img" src="{{this.forecastItems[2].icon}}">
+                              <h4 class="card-title">{{this.forecastItems[2].name}} </h4>
+                              <p class="card-category">{{this.forecastItems[2].detailedForecast}} </p>
+                            </div>
+                            <div class="card-body">
+                              <mat-chip-list>
+                                <mat-chip color="primary" selected="true">
+                                  <mat-icon >thermostat</mat-icon>
+                                  &nbsp;{{this.forecastItems[2].temperature}} °F
+                                </mat-chip>
+                                <mat-chip color="info" selected="true">
+                                  <mat-icon >wb_cloudy</mat-icon>
+                                  &nbsp;{{this.forecastItems[2].windSpeed}}
+                                </mat-chip>
+                              </mat-chip-list>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
