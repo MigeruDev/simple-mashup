@@ -29,6 +29,7 @@ export class HotelComponent implements OnInit {
   is_loading = false;
   show_info =false;
   is_welcome = true;
+  is_hotels = false;
 
   province = "";
   city: any;
@@ -86,6 +87,7 @@ export class HotelComponent implements OnInit {
 
   /* ----------======= Obtiene una pequeña descripción de la ciudad =======---------- */
   getCityInfo(){
+    this.hotels = [];
     this.is_loading = true;
     this.is_welcome = false;
     this.show_info = false;
@@ -100,6 +102,7 @@ export class HotelComponent implements OnInit {
 
   /* ----------======= Obtiene informacion de los hoteles de una ciudad =======---------- */
   getHotels(){
+    this.is_hotels = true;
     this.rest.getHotels(
       this.city.lat,
       this.city.lng,
@@ -107,8 +110,8 @@ export class HotelComponent implements OnInit {
       new Date(this.form.get("checkOut").value).toISOString().slice(0,10),
       this.form.get("rooms").value,
       this.form.get("sortOrder").value).subscribe((data: any[]) => {
-      this.hotels = data["data"]
-      console.log(data)
+      this.hotels = data["data"];
+      this.is_hotels = false;
     });
   }
 

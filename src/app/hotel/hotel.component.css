@@ -43,6 +43,35 @@ mat-form-field {
   opacity: 0.4 !important;
 }
 
+.btn-form {
+  max-width: 99%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.card-hotels {
+  margin-top: 20px;
+}
+
+.card-hotel {
+  margin-bottom: 50px;
+}
+
+.card-hotel mat-card-actions{
+  position: absolute;
+  bottom: 10px;
+}
+
+.card-hotel mat-card {
+  height: 110%;
+}
+
+mat-card-actions button {
+  color:forestgreen;
+}
 
 /***************************************************************/
   /* Mat Expansion CSS*/

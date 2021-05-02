@@ -119,45 +119,61 @@
                 </div>
             </div>
           </div>
+          <div class="row col-12 btn-form">
+            <button mat-raised-button type="submit" 
+            [disabled]="form.invalid"
+            class="btn btn-primary col-md-12" (click)="getHotels()" >
+              ¡Comparemos Precios! 👌
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-
-
-
-
-    <div class="col-md-4">
-      <!--Card-->
-      <mat-card cascade="true">
-
-        <!--Card image-->
-        <div class="waves-light">
-          <img mat-card-image src="https://mdbootstrap.com/img/Photos/Others/men.jpg">
-        </div>
-        <!--/Card image-->
-
-        <mat-card-content class="text-left">
-          <!--Card content-->
-          <mat-card-title class="card-title">Billy Cullen </mat-card-title>
-          <mat-card-subtitle>Web developer</mat-card-subtitle>
-
-          <p>
-            Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem
-            aperiam.
-          </p>
-        </mat-card-content>
-        
-        <mat-card-actions>
-          <button mat-button>
-            <mat-icon class="material-icon">home</mat-icon>
-          </button>
-          <button mat-button>
-            <mat-icon class="material-icon">home</mat-icon>
-          </button>
-        </mat-card-actions>
-
-      </mat-card>
+    <!--################################# SHOWS BEST SELLER HOTELS ###############################################-->
+    <div *ngIf="is_hotels"
+     style="margin-top: 50px;"
+     class="card-spinner">
+      <mat-spinner>
+      </mat-spinner>
     </div>
+    <div *ngIf="hotels?.length > 0" class="row card-hotels">
+        
+      <div *ngFor="let hotel of hotels" class="col-md-4 card-hotel">
+        <!--Card-->
+        <mat-card cascade="true">
+
+          <!--Card image-->
+          <div class="waves-light">
+            <img mat-card-image src="{{hotel.img}}">
+          </div>
+          <!--/Card image-->
+
+          <mat-card-content class="text-left">
+            <!--Card content-->
+            <mat-card-title class="card-title">{{hotel.name}} </mat-card-title>
+            <mat-card-subtitle>
+              <mat-icon style="font-size: 20px" class="material-icon">place</mat-icon>
+              {{hotel.address}}
+            </mat-card-subtitle>
+          </mat-card-content>
+          
+          <mat-card-actions>
+            <button mat-button>
+              {{hotel.cost}}
+              <mat-icon class="material-icon">paid</mat-icon>
+            </button>
+            <button mat-button>
+              {{form.get("rooms").value}}
+              <mat-icon class="material-icon">night_shelter</mat-icon>
+            </button>
+          </mat-card-actions>
+
+        </mat-card>
+      </div>
+    </div>
+
+
+    
   </div>
 </div>
