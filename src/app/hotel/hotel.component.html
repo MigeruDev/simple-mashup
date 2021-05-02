@@ -38,7 +38,7 @@
                   </mat-spinner>
                 </div>                
                 <!--Card image-->
-                <div *ngIf="!is_loading" class="card-city col-lg-4 col-md-4">
+                <div *ngIf="show_info" class="card-city col-lg-4 col-md-4">
                   <!-- <img mat-card-image src="{{this.city_img}}"> -->
                   <mat-carousel
                     timings="150ms ease-in"
@@ -65,7 +65,7 @@
                     ></mat-carousel-slide>
                   </mat-carousel>
                 </div>
-                <div *ngIf="!is_loading" class="col-lg-8 col-md-8">
+                <div *ngIf="show_info" class="col-lg-8 col-md-8">
                   <mat-card-content class="text-left">
                     <p>{{this.city_desc}}</p>
                   </mat-card-content>

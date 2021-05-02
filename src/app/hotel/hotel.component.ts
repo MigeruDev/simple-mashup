@@ -23,6 +23,7 @@ export class HotelComponent implements OnInit {
   };
 
   is_loading = false;
+  show_info =false;
   is_welcome = true;
 
   province = "";
@@ -83,11 +84,13 @@ export class HotelComponent implements OnInit {
   getCityInfo(){
     this.is_loading = true;
     this.is_welcome = false;
+    this.show_info = false;
     this.rest.getCityInfo(this.city.city).subscribe((data: any[]) => {
       this.city_desc = data["data"]["wiki"];
       this.city_img = data["data"]["imgs"][0];
       this.city_imgs = data["data"]["imgs"];
       this.is_loading = false;
+      this.show_info =true;
     });
   }
 
