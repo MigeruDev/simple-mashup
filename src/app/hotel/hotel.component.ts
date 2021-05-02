@@ -18,7 +18,12 @@ export class HotelComponent implements OnInit {
   form: FormGroup;
 
   sortOrders = [
-    "BEST_SELLER"
+    "BEST_SELLER",
+    "PRICE",
+    "PRICE_HIGHEST_FIRST",
+    "STAR_RATING_HIGHEST_FIRST",
+    "STAR_RATING_LOWEST_FIRST",
+    "GUEST_RATING"
   ];
 
   icons: SvgIconOverrides = {
