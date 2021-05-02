@@ -10,6 +10,7 @@ mat-form-field {
 .card-city {
   margin-top: 20px;
   border-radius: 5px;
+  margin-right: 0;
 }
 
 .card-city .mat-card-image {
@@ -25,8 +26,8 @@ mat-form-field {
 
 .card-gunter {
   position: relative;
-  left: 40%;
   right: 40%;
+  left: 40%;
 }
 
 .card .card-footer {
